@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Virtual</title>
+</head>
+
+<body>
+    <h1> Calculadora Digital </h1>
+    <div id="numeros">
+        <input id="n1" type="number" name="num" placeholder="Digite um numero"> </input> <br> <br>
+        <input id="n2" type="number" name="num" placeholder="Digite outro número"> </input> <br> <br>
+    </div>
+
+    <div id="funcoes">
+        <button onclick="Somar()"> Soma </button>
+        <button onclick="Subtrair()"> Subtração </button>
+        <button onclick="Multiplicar()"> Multiplicação </button>
+        <button onclick="Dividir()"> Divisão </button> <br> <br>
+    </div>
+    <div class="resultado"> </div>
+
+</body>
+<script>
+
+
+
+    function Somar() {
+        var num1 = document.getElementById('n1').value;
+        var num2 = document.getElementById('n2').value;
+        var result = parseInt(num1) + parseInt(num2);
+        document.querySelector(".resultado").innerHTML = "Resultado :"  + result;
+
+    }
+    function Subtrair() {
+        var num1 = document.getElementById('n1').value;
+        var num2 = document.getElementById('n2').value;
+        var result = parseInt(num1) - parseInt(num2);
+        document.querySelector(".resultado").innerHTML = "Resultado :"  + result;
+
+    }
+    function Multiplicar() {
+        var num1 = document.getElementById('n1').value;
+        var num2 = document.getElementById('n2').value;
+        var result = parseInt(num1) * parseInt(num2);
+        document.querySelector(".resultado").innerHTML = "Resultado :"  + result;
+
+    }
+    function Dividir() {
+        var num1 = document.getElementById('n1').value;
+        var num2 = document.getElementById('n2').value;
+        var result = parseFloat(num1) / parseFloat(num2);
+        document.querySelector(".resultado").innerHTML = "Resultado : "  + result;
+
+    }
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Relógio Digital</title>
+    <style>
+        #clock {
+            text-align: center;
+            font-size: 70px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock"></div>
+
+</body>
+<script>
+    function relogio() {
+        var data = new Date();
+        var hora = data.getHours();
+        var minutos = data.getMinutes();
+        var segundos = data.getSeconds();
+
+        if (hora < 10) hora = '0' + hora ;
+        if (minutos < 10) minutos = '0' + minutos ;
+        if (segundos < 10) segundos = '0' + segundos ;
+
+        var relogio_atual = hora + ":" + minutos + ":" + segundos;
+        document.getElementById('clock').innerHTML = relogio_atual;
+    }
+setInterval(relogio,1000)
+
+</script>
+
+</html>
